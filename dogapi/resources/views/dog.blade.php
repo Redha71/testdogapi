@@ -26,10 +26,6 @@
                 <option value="{{ $key }}">{{ $key }}</option>
 
 
-               @foreach ($message as $item)
-               <p>{{ $key }} : {{ $item }}</p>
-               @endforeach
-
             @endforeach
         </select>
             @endif
@@ -39,6 +35,6 @@
 
 <p></p>
     </div>
- 
+
 </body>
 </html>

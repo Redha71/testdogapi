@@ -18,16 +18,16 @@
             @foreach ($jsonData->message as $key=>$message)
             <h3>Breeds Name:  </h3>
                 <option value="{{ $key }}">{{ $key }}</option>
-               @foreach ($message as $item)
-               <p>{{ $key }} : {{ $item }}</p>
-               @endforeach
 
             @endforeach
         </select>
             @endif
             <button type="submit">Get Random Breed</button>
           </form>
+          @if (isset($image))
           <img src="{{ $image->message }}">
+          @endif
+
 
 
 

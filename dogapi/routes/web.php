@@ -22,10 +22,15 @@ Route::get('dog', function () {
 Route::get('randombreed', function () {
     return view('randombreed');
 });
-
+Route::get('savebreed', function () {
+    return view('savebreed');
+});
+Route::get('userbreed',[ DogController::class,'userBSelect'])->name('userbreed');
 Route::get('selectbreedimage', [DogController::class, 'getbreedlist'])->name('breed.list');
 Route::post('dog/list', [DogController::class, 'index'])->name('dog.list');
 Route::post('dog/random', [DogController::class, 'randomBreed'])->name('dog.random');
 Route::post('dog/image', [DogController::class, 'selectBreedImage'])->name('dog.image');
+Route::post('dog/save', [DogController::class, 'saveBreed'])->name('dog.save');
+Route::post('user/breed/save', [DogController::class, 'saveBUser'])->name('user.breed.save');
 
 
